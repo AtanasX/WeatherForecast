@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		1F548C7C254C407300E084EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F548C7B254C407300E084EF /* AppDelegate.swift */; };
 		1F548C7E254C407300E084EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F548C7D254C407300E084EF /* SceneDelegate.swift */; };
-		1F548C80254C407300E084EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F548C7F254C407300E084EF /* ViewController.swift */; };
+		1F548C80254C407300E084EF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F548C7F254C407300E084EF /* FirstViewController.swift */; };
 		1F548C83254C407300E084EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F548C81254C407300E084EF /* Main.storyboard */; };
 		1F548C85254C407C00E084EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F548C84254C407C00E084EF /* Assets.xcassets */; };
 		1F548C88254C407C00E084EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F548C86254C407C00E084EF /* LaunchScreen.storyboard */; };
+		1F548C94254DE43D00E084EF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F548C93254DE43D00E084EF /* SecondViewController.swift */; };
+		1F548C97254DE83000E084EF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F548C96254DE83000E084EF /* Model.swift */; };
+		1FAE3CEE254DF26C000AECB8 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE3CED254DF26C000AECB8 /* PlaceCell.swift */; };
+		1FAE3CF7254E011E000AECB8 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE3CF6254E011E000AECB8 /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F548C78254C407300E084EF /* WeatherForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F548C7B254C407300E084EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F548C7D254C407300E084EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F548C7F254C407300E084EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F548C7F254C407300E084EF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		1F548C82254C407300E084EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F548C84254C407C00E084EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F548C87254C407C00E084EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F548C89254C407C00E084EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F548C93254DE43D00E084EF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1F548C96254DE83000E084EF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1FAE3CED254DF26C000AECB8 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		1FAE3CF6254E011E000AECB8 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,49 @@
 			children = (
 				1F548C7B254C407300E084EF /* AppDelegate.swift */,
 				1F548C7D254C407300E084EF /* SceneDelegate.swift */,
-				1F548C7F254C407300E084EF /* ViewController.swift */,
+				1FAE3CF3254DFAF7000AECB8 /* Support */,
+				1FAE3CF0254DFAE0000AECB8 /* Views */,
+				1FAE3CF1254DFAF0000AECB8 /* Models */,
 				1F548C81254C407300E084EF /* Main.storyboard */,
+				1FAE3CF9254E0123000AECB8 /* Networking */,
 				1F548C84254C407C00E084EF /* Assets.xcassets */,
 				1F548C86254C407C00E084EF /* LaunchScreen.storyboard */,
 				1F548C89254C407C00E084EF /* Info.plist */,
 			);
 			path = WeatherForecast;
+			sourceTree = "<group>";
+		};
+		1FAE3CF0254DFAE0000AECB8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F548C7F254C407300E084EF /* FirstViewController.swift */,
+				1F548C93254DE43D00E084EF /* SecondViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1FAE3CF1254DFAF0000AECB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F548C96254DE83000E084EF /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1FAE3CF3254DFAF7000AECB8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				1FAE3CED254DF26C000AECB8 /* PlaceCell.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		1FAE3CF9254E0123000AECB8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1FAE3CF6254E011E000AECB8 /* Networking.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F548C80254C407300E084EF /* ViewController.swift in Sources */,
+				1F548C97254DE83000E084EF /* Model.swift in Sources */,
+				1F548C94254DE43D00E084EF /* SecondViewController.swift in Sources */,
+				1F548C80254C407300E084EF /* FirstViewController.swift in Sources */,
 				1F548C7C254C407300E084EF /* AppDelegate.swift in Sources */,
 				1F548C7E254C407300E084EF /* SceneDelegate.swift in Sources */,
+				1FAE3CEE254DF26C000AECB8 /* PlaceCell.swift in Sources */,
+				1FAE3CF7254E011E000AECB8 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
