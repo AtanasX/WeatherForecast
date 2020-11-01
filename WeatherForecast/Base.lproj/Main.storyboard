@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--About-->
+        <!--Map-->
         <scene sceneID="I93-u3-hDP">
             <objects>
                 <viewController id="15A-88-zwa" customClass="SecondViewController" customModule="WeatherForecast" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <viewLayoutGuide key="safeArea" id="rFD-tV-Msg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="questionmark.circle.fill" catalog="system" id="0UB-7v-nwa">
+                    <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="0UB-7v-nwa">
                         <color key="badgeColor" name="AccentColor"/>
                     </tabBarItem>
                 </viewController>
@@ -97,24 +97,75 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fjY-4Z-uLn">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="wnH-Ur-rF5">
-                            <color key="tintColor" name="AccentColor"/>
-                            <connections>
-                                <action selector="refreshTable:" destination="Bh3-Nz-3RP" id="MCe-Lu-XO7"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uh5-hH-J6m">
                             <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <segue destination="Sum-jL-70e" kind="show" identifier="addPlace" id="F5X-L9-EDc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="refreshButton" destination="wnH-Ur-rF5" id="4Go-hO-5Az"/>
                         <outlet property="tableView" destination="WjD-Ap-QWM" id="Tz5-zg-bsj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eht-8i-CBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="155.07246376811597" y="47.544642857142854"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="CQQ-Ch-1BG">
+            <objects>
+                <viewController id="Sum-jL-70e" customClass="SearchViewController" customModule="WeatherForecast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7pt-Iv-eew">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-sQ-TMe">
+                                <rect key="frame" x="22" y="431" width="370" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqZ-ku-hrz">
+                                <rect key="frame" x="107" y="238" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3xv-VM-as0"/>
+                                    <constraint firstAttribute="height" constant="40" id="oqk-eC-t5t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4JK-sq-SU2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KqZ-ku-hrz" firstAttribute="centerX" secondItem="7pt-Iv-eew" secondAttribute="centerX" id="7Ga-qk-lRD"/>
+                            <constraint firstItem="KqZ-ku-hrz" firstAttribute="top" secondItem="4JK-sq-SU2" secondAttribute="top" constant="150" id="QPV-rH-yL0"/>
+                            <constraint firstItem="rqb-sQ-TMe" firstAttribute="centerY" secondItem="7pt-Iv-eew" secondAttribute="centerY" id="WCx-Fc-7DS"/>
+                            <constraint firstItem="4JK-sq-SU2" firstAttribute="trailing" secondItem="rqb-sQ-TMe" secondAttribute="trailing" constant="22" id="apa-0j-3WJ"/>
+                            <constraint firstItem="rqb-sQ-TMe" firstAttribute="leading" secondItem="4JK-sq-SU2" secondAttribute="leading" constant="22" id="zwN-S2-HEO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uM5-Tf-liH">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="D8W-iG-wgD">
+                            <connections>
+                                <action selector="cancelTapped:" destination="Sum-jL-70e" id="Rdd-2l-Qbg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="wxZ-ul-536">
+                            <connections>
+                                <action selector="addTapped:" destination="Sum-jL-70e" id="MsE-vD-ENN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="message" destination="KqZ-ku-hrz" id="mtu-9B-CMe"/>
+                        <outlet property="textField" destination="rqb-sQ-TMe" id="pqn-8l-0g8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRF-9v-SNO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064" y="48"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xYo-sP-PxX">
@@ -158,7 +209,7 @@
     </scenes>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
-        <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.58099997043609619" green="0.1289999932050705" blue="0.57499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

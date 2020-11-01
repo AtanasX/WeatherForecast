@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Places {
+struct Place {
     var name: String
     var temperature: Double
     var temperatureF: Double {

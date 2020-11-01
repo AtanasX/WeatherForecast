@@ -12,9 +12,9 @@ let apiKey = "111097ee12091c1d539a14fa2f09686c"
 class NetworkManager {
     static var shared = NetworkManager()
     
-    func getData(place: String) -> Places {
+    func getData(place: String) {
         
-        var output: Places = Places(name: place, temperature: 0)
+       
         
         URLSession.shared.dataTask(with: URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(place)&appid=\(apiKey)")!) { (data, response, error) in
             
@@ -32,11 +32,11 @@ class NetworkManager {
             }
             
             if let result = result {
-                output.temperature = result.main.temp - 262.15
+                //output.temperature = result.main.temp - 262.15
             }
             
         }.resume()
-        return output
+        
     }
     
     

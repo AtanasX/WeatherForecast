@@ -17,6 +17,7 @@
 		1F548C97254DE83000E084EF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F548C96254DE83000E084EF /* Model.swift */; };
 		1FAE3CEE254DF26C000AECB8 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE3CED254DF26C000AECB8 /* PlaceCell.swift */; };
 		1FAE3CF7254E011E000AECB8 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE3CF6254E011E000AECB8 /* Networking.swift */; };
+		1FCD04B8254EA290006154C2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD04B7254EA290006154C2 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1F548C96254DE83000E084EF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1FAE3CED254DF26C000AECB8 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		1FAE3CF6254E011E000AECB8 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		1FCD04B7254EA290006154C2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				1F548C7F254C407300E084EF /* FirstViewController.swift */,
 				1F548C93254DE43D00E084EF /* SecondViewController.swift */,
+				1FCD04B7254EA290006154C2 /* SearchViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			files = (
 				1F548C97254DE83000E084EF /* Model.swift in Sources */,
 				1F548C94254DE43D00E084EF /* SecondViewController.swift in Sources */,
+				1FCD04B8254EA290006154C2 /* SearchViewController.swift in Sources */,
 				1F548C80254C407300E084EF /* FirstViewController.swift in Sources */,
 				1F548C7C254C407300E084EF /* AppDelegate.swift in Sources */,
 				1F548C7E254C407300E084EF /* SceneDelegate.swift in Sources */,

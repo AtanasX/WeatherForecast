@@ -11,26 +11,18 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var refreshButton: UIBarButtonItem!
-    
-    @IBAction func refreshTable(_ sender: Any) {
-        
-        let place = "London"
-        
-        let newPlace = Places(name: place, temperature: NetworkManager.shared.getData(place: place).temperature)
-        
-        data.append(newPlace)
-        
-        tableView.reloadData()
-        
-    }
-    
-    var data: [Places] = []
+    var data: [Place] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //data.append(Places(name: "Sofia", temperature: 13.00))
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "addPlace", let destination = segue.destination as? SearchViewController {
+            destination.delegate = self
+        }
     }
 
 
@@ -54,4 +46,30 @@ extension FirstViewController: UITableViewDataSource {
     }
     
     
+}
+
+extension FirstViewController: SearchViewControllerDelegate {
+    func searchViewController(_ controller: SearchViewController, didFinishAddingPlace place: Place) {
+        
+        self.data.append(place)
+        tableView.reloadData()
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func searchViewControllerDidCancel(_ controller: SearchViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+}
+
+extension FirstViewController: UINavigationControllerDelegate {
+    func navigationController(
+        _ navigationController: UINavigationController,
+        willShow viewController: UIViewController,
+        animated: Bool) {
+        
+        
+    }
 }

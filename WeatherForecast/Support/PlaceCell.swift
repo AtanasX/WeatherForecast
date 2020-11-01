@@ -13,9 +13,9 @@ class PlaceCell: UITableViewCell {
     
     @IBOutlet weak var temperatureLabel: UILabel!
     
-    func setPlace(place: Places) {
+    func setPlace(place: Place) {
         placeLabel.text = place.name
-        temperatureLabel.text = String(place.temperature)
+        temperatureLabel.text = String(format: "%.2f", place.temperature)
     }
     
 }
