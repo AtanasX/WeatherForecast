@@ -17,16 +17,48 @@
                     <view key="view" contentMode="scaleToFill" id="wGX-IF-OIB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeY-zo-YSI">
+                                <rect key="frame" x="158.5" y="544" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ABY-8q-uLs"/>
+                                </constraints>
+                                <state key="normal" title="Get location">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="getLocationTapped:" destination="15A-88-zwa" eventType="touchUpInside" id="C0h-Sh-an9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6i7-V7-hfP">
+                                <rect key="frame" x="107" y="332" width="200" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Q86-cB-Axe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rFD-tV-Msg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6i7-V7-hfP" firstAttribute="centerX" secondItem="wGX-IF-OIB" secondAttribute="centerX" id="76x-wC-58X"/>
+                            <constraint firstItem="CeY-zo-YSI" firstAttribute="top" secondItem="rFD-tV-Msg" secondAttribute="top" constant="500" id="LxE-xs-t6m"/>
+                            <constraint firstItem="6i7-V7-hfP" firstAttribute="top" secondItem="rFD-tV-Msg" secondAttribute="top" constant="288" id="bKg-0e-9Uh"/>
+                            <constraint firstItem="CeY-zo-YSI" firstAttribute="centerX" secondItem="wGX-IF-OIB" secondAttribute="centerX" id="gNn-ag-IDF"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="0UB-7v-nwa">
                         <color key="badgeColor" name="AccentColor"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="label" destination="6i7-V7-hfP" id="N0A-SK-TbY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbq-df-oXF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-755" y="706"/>
+            <point key="canvasLocation" x="-755.07246376811599" y="705.80357142857144"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="Cv7-28-whY">
